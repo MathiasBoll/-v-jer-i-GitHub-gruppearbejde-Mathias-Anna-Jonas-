@@ -1,0 +1,60 @@
+/* Topbar */
+.top-bar{
+  background:#000;              /* Black background for the top bar */
+  color:#fff;                   /* White text color */
+  font-weight:600;              /* Bold text */
+  letter-spacing:.03em;         /* Slightly increased letter spacing */
+  display:flex;                 /* Use flexbox for layout */
+  align-items:center;           /* Vertically center items */
+  justify-content:center;       /* Horizontally center items */
+  gap:10px;                     /* Space between child elements */
+  padding:8px 12px;             /* Padding inside the top bar */
+}
+.topbar-icon{ 
+  width:16px;  /* Set icon width */
+  height:16px; /* Set icon height */
+  filter: invert(1); /* Invert icon color for dark background */
+}
+
+.topbar-text{ 
+ font-size:13px; }
+
+/* Header wrap */
+/* Header container styles */
+.Header{
+  position: relative; /* Establishes a positioning context for child elements */
+  overflow: clip; /* Prevents content from overflowing the header */
+  background: linear-gradient(180deg,#ffffff 0%, #faf7f3 100%); /* Subtle vertical gradient background */
+}
+
+/* Nav (desktop) */
+/* Navigation bar styles */
+.nav-ul{
+  display:flex; /* Arrange navigation items in a row */
+  gap:36px; /* Space between navigation items */
+  align-items:center; /* Vertically center items */
+  justify-content:flex-end; /* Align items to the right */
+  padding:14px 24px; /* Space inside the navigation bar */
+  border-bottom:1px solid #e6e6e6; /* Subtle bottom border */
+  background:#fff; /* White background */
+  position: sticky; /* Stick to the top on scroll */
+  top:0; /* Stick to the very top */
+  z-index:30; /* Ensure it stays above other elements */
+  list-style:none; /* Remove default list bullets */
+  margin:0; /* Remove default margin */
+}
+/* Style for navigation links */
+.nav-ul a{
+  text-decoration:none; /* Remove underline from links */
+  color:var(--accent);  /* Use accent color for text */
+  font-weight:600; 
+  font-size:14px; 
+  letter-spacing:.06em; 
+  text-transform:uppercase; /* Uppercase text */
+}
+
+/* Hover effect for navigation links */
+.nav-ul a:hover{ 
+  opacity:.8; /* Slightly fade link on hover */
+}
+

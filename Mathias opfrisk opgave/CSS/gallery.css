@@ -1,0 +1,23 @@
+
+/* Gallery container styles */
+.gallery{
+  max-width:var(--max);              /* Maximum width set by CSS variable */
+  margin:40px auto;                  /* Center gallery with vertical spacing */
+  padding:0 24px 32px;               /* Padding: top 0, sides 24px, bottom 32px */
+  display:grid;                      /* Use CSS Grid layout */
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  gap:14px;                          /* 14px gap between grid items */
+}
+/* Gallery image container styles */
+.gallery-img{
+  overflow:hidden;           /* Hide any overflow from child images */
+  border-radius:0;           /* No border radius (no rounding as in mockup) */
+  box-shadow:none;           /* No box shadow (none as in mockup) */
+  background:#ddd;           /* Light gray background for image container */
+}
+/* Make images fill their container and crop to fit */
+.gallery-img img{
+  width:100%;           /* Image takes full width of container */
+  height:100%;          /* Image takes full height of container */
+  object-fit:cover;     /* Image is cropped to cover container, preserving aspect ratio */
+}

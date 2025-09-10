@@ -1,0 +1,74 @@
+/* Kontakt */
+
+/* Main section for newsletter signup */
+.tilmeld-nyhedsbrev{
+  position:relative; /* Allows absolute positioning of inner content */
+  background:#e6e6e6; /* Light gray background */
+  padding:70px 16px 90px; /* Padding: top, sides, bottom */
+}
+
+/* Hide background container by default */
+.background-container{ display:none; }
+
+/* Content container inside the newsletter section */
+.tilmeld-nyhedsbrev-content{
+  position:relative; /* Enables absolute positioning for children */
+  max-width:620px;   /* Maximum width for content */
+  margin:0 auto;     /* Center horizontally */
+  background:transparent; /* No background color */
+  border-radius:0;   /* No rounded corners */
+  box-shadow:none;   /* No shadow */
+  padding:0;         /* No extra padding */
+}
+
+/* Heading inside the newsletter section */
+.tilmeld-nyhedsbrev-content h2{
+  text-align:center; /* Center text */
+  margin-bottom:22px; /* Space below heading */
+  color:#111; /* Dark text color */
+  font-size:clamp(1.5rem, 1.2rem + 1.4vw, 2.2rem); /* Responsive font size */
+}
+
+/* Wrapper for the form */
+.form-wrapper{ display:block; }
+
+/* Group for each input and label */
+.input-group{ margin:14px 0; }
+
+/* Styles for input fields */
+.input-field{
+  width:100%; /* Full width */
+  padding:12px; /* Inner spacing */
+  border:2px solid var(--border); /* Border using CSS variable */
+  border-radius:0; /* No rounded corners */
+  background:#f7f7f7; /* Light background */
+  font-size:1rem; /* Standard font size */
+  outline:none; /* Remove default outline */
+  transition:border-color .2s ease, box-shadow .2s ease; /* Smooth transitions */
+}
+
+/* Highlight input field on focus */
+.input-field:focus{
+  border-color:#111; /* Change border color to dark */
+  box-shadow:0 0 0 4px rgba(0,0,0,.06); /* Add subtle shadow */
+}
+
+/* Styles for the submit button */
+.send-button{
+  width:100%;              /* Full width */
+  border:none;             /* No border */
+  cursor:pointer;          /* Pointer cursor on hover */
+  background:#000;         /* Black background */
+  color:#fff;              /* White text */
+  padding:14px 12px;       /* Padding: top/bottom, sides */
+  border-radius:0;         /* No rounded corners */
+  letter-spacing:.1em;     /* Slightly increased letter spacing */
+  font-weight:700;         /* Bold text */
+  transition:transform .08s ease, opacity .2s ease; /* Smooth transitions */
+}
+
+/* Slightly reduce opacity on hover */
+.send-button:hover{ opacity:.9; }
+
+/* Move button down 1px on click */
+.send-button:active{ transform:translateY(1px); }

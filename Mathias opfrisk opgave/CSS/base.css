@@ -1,0 +1,130 @@
+/* === Base + variabler === */
+:root{
+  /* === Farvevariabler === */
+  --bg: #e9e9e9;        /* Lys grå baggrund (kontakt/side) */
+  --bg-dark: #2f2f2f;   /* Mørk baggrund (fx footer/nav) */
+  --text: #111;         /* Primær tekstfarve */
+  --muted: #666;        /* Dæmpet tekstfarve (sekundær tekst) */
+  --white: #fff;        /* Hvid (bruges til tekst eller baggrund) */
+  --accent: #000;       /* Sort accent (topbar/nav/knapper) */
+  --accent-2: #444;     /* Mørk grå accent */
+  --accent-3: #faf7f3;  /* Lys hero fallback */
+
+  /* === UI-variabler === */
+  --card: #ffffff;      /* Kort-baggrund */
+  --border: #bdbdbd;    /* Kantfarve */
+  --radius: 8px;        /* Standard border-radius */
+  --shadow: 0 6px 18px rgba(0,0,0,.08); /* Standard skygge */
+  --max: 1200px;        /* Maksimal bredde for container */
+}
+
+/* 
+  Global box-sizing rule:
+  Ensures padding and border are included in element's total width and height.
+*/
+*{ box-sizing: border-box; }
+
+/* 
+  Enables smooth scrolling for anchor links.
+*/
+html{ 
+  scroll-behavior: smooth; 
+}
+
+/* 
+  Base body styles:
+  - Removes default margin.
+  - Sets default text color and background using CSS variables.
+  - Applies a modern, readable font stack.
+  - Sets comfortable line height for readability.
+*/
+body{
+  margin:0;
+  color:var(--text);
+  background:var(--bg);
+  font-family:"Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height:1.6;
+}
+
+/* 
+  Responsive images:
+  - Ensures images scale down to fit their container.
+  - Removes extra space below images by setting display to block.
+  - Maintains aspect ratio.
+*/
+img{ 
+  max-width:100%; 
+  display:block; 
+  height:auto; 
+}
+
+/* 
+  Headings (h1, h2, h3):
+  - Uses a decorative serif font for headings.
+  - Removes default top margin and adds spacing below.
+*/
+h1,h2,h3{ 
+  font-family:"Abril Fatface", serif; 
+  margin:0 0 .6rem; 
+}
+
+/* 
+  h1 styles:
+  - Responsive font size using clamp for fluid scaling.
+  - White text color for contrast on dark backgrounds.
+*/
+h1{ 
+  font-size:clamp(1.4rem, 1.2rem + 1.6vw, 2.4rem); 
+  color:var(--white); 
+}
+
+/* 
+  h2 styles:
+  - Slightly smaller responsive font size.
+*/
+h2{ 
+  font-size:clamp(1.4rem, 1.1rem + 1vw, 2.2rem); 
+}
+
+/* 
+  h3 styles:
+  - Fixed font size for subheadings.
+*/
+h3{ 
+  font-size:1.1rem; 
+}
+
+/* 
+  Section spacing:
+  - Adds vertical padding to sections for separation.
+*/
+section{ 
+  padding:64px 16px; 
+}
+
+/* 
+  Container utility:
+  - Sets a maximum width and centers content horizontally.
+*/
+.container{ 
+  max-width:var(--max); 
+  margin-inline:auto; 
+}
+  
+  /* 
+    .visually-hidden
+    Utility class for hiding elements visually but keeping them accessible to screen readers.
+    Useful for accessibility (e.g., form labels, instructions).
+  */
+  .visually-hidden{
+    position:absolute!important; /* Remove from normal flow */
+    width:1px;                  /* Minimal width */
+    height:1px;                 /* Minimal height */
+    padding:0;                  /* Remove padding */
+    margin:-1px;                /* Offset from view */
+    overflow:hidden;            /* Hide overflow */
+    clip: rect(0, 0, 0, 0);     /* Visually hides the element by clipping it to a 0×0 rectangle. Often used with position:absolute and overflow:hidden to  hide content from sighted users while keeping it accessible to screen readers. */
+    
+    white-space:nowrap;         /* Prevent line breaks */
+    border:0;                   /* Remove border */
+  }

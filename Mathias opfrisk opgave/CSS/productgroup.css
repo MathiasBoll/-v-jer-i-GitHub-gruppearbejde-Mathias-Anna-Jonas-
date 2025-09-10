@@ -1,0 +1,72 @@
+/* Container for all product groups */
+.product-groups{
+  /* Transparent background for the container */
+  background:transparent;
+  /* Remove any box shadow */
+  box-shadow:none;
+  /* Add vertical and horizontal padding */
+  padding:64px 24px;
+  /* Limit the maximum width of the container */
+  max-width:900px;
+  /* Center the container horizontally */
+  margin-inline:auto;
+}
+
+/* Heading for the product groups section */
+.product-groups>h2{
+  /* Center the heading text and add space below */
+  text-align:center; 
+  margin:0 0 40px;
+  /* Responsive font size for the heading */
+  font-size:clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem);
+}
+
+/* Individual product group styling */
+.product-group{
+  /* Use CSS Grid for layout */
+  display:grid;
+  /* Define two columns: one for the icon, one for content */
+  grid-template-columns:72px 1fr;
+  /* Set row and column gaps */
+  gap:10px 20px;
+  /* Align items to the start of the grid area */
+  align-items:start;
+  /* Add padding to the top, bottom, and no padding on sides */
+  padding:10px 0 28px;
+  /* Add margin below each product group */
+  margin:0 0 22px;
+  /* Remove border, background, and box shadow */
+  border:none; background:transparent; box-shadow:none;
+}
+
+/* Icon container inside each product group */
+.product-group .product-icon{
+  /* Span the icon across two grid rows */
+  grid-row:span 2;
+  /* Set fixed width and height for the icon container */
+  width:64px; height:64px;
+  /* Center the icon using CSS Grid */
+  display:grid; place-items:center;
+  /* Remove background and border */
+  background:transparent; border:none;
+}
+
+/* Icon image styling */
+.product-group .product-icon img{
+  width:48px; 
+  height:48px; 
+  object-fit:contain;
+}
+
+/* Product group title styling */
+.product-group h3{
+  margin:0 0 8px; 
+  font-size: clamp(1.1rem, 1rem + .4vw, 1.3rem);
+}
+
+/* Product group description styling */
+.product-group p{
+  margin:0; 
+  color:#222; 
+  line-height:1.6;
+}

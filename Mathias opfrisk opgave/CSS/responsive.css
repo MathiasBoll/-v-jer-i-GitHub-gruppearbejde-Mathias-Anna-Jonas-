@@ -1,0 +1,28 @@
+/* Generelle justeringer */
+/* Tilpas topbar og hero-tekst på små skærme */
+@media (max-width:720px){
+  .topbar-text{ font-size:13px; } /* Mindre tekststørrelse i topbaren */
+  /* Hero-tekst mere centreret og tilpasset på små skærme */
+  .Header h1{ left:50%; transform:translateX(-50%); bottom:12%; max-width:85vw; }
+}
+
+/* Galleri og anbefalinger */
+/* To kolonner for anbefalede produkter på tablets og mindre skærme */
+@media (max-width:1024px){
+  .recommended-products{ grid-template-columns:repeat(2, 1fr); gap:20px; }
+}
+/* To kolonner i galleriet på små skærme */
+@media (max-width:720px){
+  .gallery{ grid-template-columns:repeat(2, 1fr); }
+}
+/* En kolonne for anbefalede produkter på meget små skærme */
+@media (max-width:520px){
+  .recommended-products{ grid-template-columns:1fr; }
+  .gallery{ grid-template-columns:1fr 1fr; } /* Stadig to kolonner i galleriet */
+}
+
+/* Reduced motion */
+/* Fjern alle animationer og overgange hvis brugeren ønsker reduceret bevægelse */
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
+}

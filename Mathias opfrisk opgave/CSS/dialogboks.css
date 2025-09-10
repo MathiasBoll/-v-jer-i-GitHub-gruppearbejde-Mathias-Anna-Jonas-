@@ -1,0 +1,51 @@
+/* Dark transparent backdrop for the dialog */
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Dialog box styling */
+
+.dialogBox {
+  border: none;                  /* Remove default border */
+  border-radius: 12px;           /* Rounded corners */
+  padding: 16px;                 /* Inner spacing */
+  display: flex;                 /* Use flex layout */
+  flex-direction: column;        /* Stack children vertically: image on top, button below */
+  align-items: center;           /* Center items horizontally */
+  gap: 12px;                     /* Space between children */
+  max-width: 95vw;               /* Responsive width: max 95% of viewport width */
+  max-height: 90vh;              /* Responsive height: max 90% of viewport height */
+  overflow: hidden;              /* Hide overflow, no scrollbars */
+}
+
+/* Responsive image styling for dialog */
+.dialogImg {
+  width: 100%;                          /* Image takes full width of dialog */
+  height: auto;                         /* Height adjusts automatically to maintain aspect ratio */
+  max-height: calc(90vh - 60px);        /* Prevents image from exceeding dialog height minus space for button & padding */
+  object-fit: contain;                  /* Scales image to fit container without cropping */
+  display: block;                       /* Removes extra space below image */
+}
+
+
+/* Close button styling */
+.closeBtn {
+  padding: 8px 16px;           /* Button inner spacing */
+  border-radius: 6px;           /* Rounded corners */
+  border: 1px solid #ccc;       /* Light gray border */
+  margin-top: -8px;             /* Slightly overlaps image for compact look */
+  background: #fff;             /* White background */
+  cursor: pointer;              /* Pointer cursor on hover */
+}
+
+/* Hide dialog when closed */
+.dialogBox:not([open]) {
+  display: none;
+}
+
+/* Larger screen adjustments */
+@media (min-width: 601px) {
+  .dialogBox {
+    width: 700px;
+  }
+}
