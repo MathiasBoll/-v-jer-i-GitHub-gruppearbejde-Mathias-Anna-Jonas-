@@ -1,48 +1,33 @@
-console.log('lalala')
-// variable som indeholder html element -'document.querySelector'  Henter billed-elementet fra hmtlen med klassen "image-in-slider"
-const imageinslider = document.querySelector('.image-in-slider')
-//Når der klikkes på next knappen så kører next funktionen og billedet skifter
-const btnNext = document.querySelector('.next')
+export function initSlider() {
+  window.addEventListener('DOMContentLoaded', () => {
+    console.log('[slider] DOM ready');
 
+    const slider = document.querySelector('.slider');
+    if (!slider) return console.error('Mangler .slider');
 
+    const img = document.createElement('img');
+    img.className = 'image-in-slider';
+    img.alt = 'Slider image';
+    slider.appendChild(img);
 
+    const h1 = document.createElement('h1');
+    h1.textContent = 'Velkommen til min side';
+    slider.appendChild(h1);
 
-// index Holder styr på hvilket billede der vises i øjeblikket
-let currentImageindex = 0;
-// Array med Liste over billedstier som der en efter en, der skal vises i slideren
-let images = [
+    // ← KORREKT PLACERING I DIT PROJEKT
+    const images = [
+      'img/slider/hero_img.jpg',
+      'img/slider/hero_img2.jpg',
+      'img/slider/hero_img3.jpg',
+    ];
 
-    'assets/img/slider/hero_img.jpg',
-    'assets/img/slider/hero_img2.jpg',
-    'assets/img/slider/hero_img3.jpg'
-]
+    let i = 0;
+    const setActive = () => { console.log('Loader:', images[i]); img.src = images[i]; };
 
-// Funktion til at opdatere billedets "src"-attribut med det aktuelle billede på img tagget i htmlen
-function setActiveSlide(){
+    img.onload = () => console.log('✅', img.src);
+    img.onerror = () => console.error('❌ 404/fejl:', img.src);
 
-    imageinslider.src = images[currentImageindex];
+    setActive();
+    setInterval(() => { i = (i + 1) % images.length; setActive(); }, 5000);
+  });
 }
-// Viser det første billede, når siden indlæses
-setActiveSlide()
-
-// Funktion til at vise næste billede i rækken
-function next() {
-      // Hvis der er flere billeder tilbage i arrayet, så viser den det næste 
-    if(currentImageindex < images.length - 1){
-
-    currentImageindex += 1
-    } else {
-         // Hvis vi er nået til sidste billede, så starter den forfra
-        currentImageindex = 0
-    }
-    // Opdater billedet i slideren
-    setActiveSlide()
-
-}
-// Skifter automatisk billede hvert 5. sekund
-setInterval(next, 5000)
-
-// Kan kun kalde funktionen efter den er blevet oprettet, det ville sige man skal skrive funktionen og derefter uden for {} så kalder man på funktionen igen for at aktivere den.
-
-//Når der klikkes på next knappen så kører next funktionen (aka frem) og billedet skifter
-btnNext.addEventListener('click', next)
