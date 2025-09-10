@@ -1,21 +1,19 @@
-/* Container til slideren */
 .slider {
-    position: relative; /* Gør det muligt at placere h1 absolut indeni */
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* Selve billedet */
 .image-in-slider {
-    max-height: 100vh;   /* Fylder aldrig mere end hele viewport-højden */
-    width: 100%;         /* Fylder hele bredden */
-    object-fit: cover;   /* Beskærer billedet pænt, så det ikke strækkes */
+  width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
 }
 
-/* Overskriften oven på billedet */
-h1 {
-    position: absolute;  /* Placeres i forhold til .slider */
-    bottom: 60px;        /* 60px fra bunden */
-    text-align: end;     /* Tekst justeres til højre */
-    padding: 0px 40px 0px 100px;
-    color: white;        /* Kontrast mod billedet */
-    font-size: clamp(0.75rem, 0.339rem + 2.054vw, 2.188rem); /* Responsiv skriftstørrelse */
+.slider h1 {
+  position: absolute;
+  bottom: 60px;
+  right: 40px;
+  color: white;
+  font-size: clamp(0.75rem, 0.339rem + 2.054vw, 2.188rem);
 }
