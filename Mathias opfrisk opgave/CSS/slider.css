@@ -47,3 +47,5 @@
   text-shadow: 0 2px 10px rgba(0,0,0,.6); /* Tilføjer skygge for bedre læsbarhed ovenpå billedet */
   z-index: 2;                   /* Sørger for at teksten ligger over overlayet */
 }
+
+

@@ -1,4 +1,3 @@
-console.log('lalala')
 // variable som indeholder html element -'document.querySelector'  Henter billed-elementet fra hmtlen med klassen "image-in-slider"
 const imageinslider = document.querySelector('.image-in-slider')
 //Når der klikkes på next knappen så kører next funktionen og billedet skifter
