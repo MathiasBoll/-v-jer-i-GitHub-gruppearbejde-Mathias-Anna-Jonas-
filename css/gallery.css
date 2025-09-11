@@ -1,16 +1,69 @@
+/* ==========================
+   Gallery kode
+   ========================== */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 2;
-
-    @media(max-width: 425px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 3;
-    }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 2;
+  gap: 12px;
+  padding: 20px;
 }
 
 .gallery-img > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: zoom-in; /* så man ser at billedet kan klikkes */
+  transition: transform .25s ease; /* smooth hover effekt */
+}
+
+.gallery-img > img:hover {
+  transform: scale(1.03); /* lille zoom ved hover */
+}
+
+/* ==========================
+   Dialog styling
+   ========================== */
+.dialogBox::backdrop {
+  background: rgba(0, 0, 0, 0.55); /* mørk baggrund */
+}
+
+.dialogBox {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #fff;
+}
+
+.dialogImg {
+  width: 100%;
+  height: auto;
+  max-height: calc(90vh - 60px); /* plads til knap */
+  object-fit: contain;
+}
+
+.closeBtn {
+  padding: 8px 24px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 16px;  /* giver luft under knappen */
+  margin-top: -8px; /* trækker knappen op tættere på billedet */
+}
+
+.closeBtn:hover {
+  background: #f2f2f2;
 }
