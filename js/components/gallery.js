@@ -1,20 +1,15 @@
+import { fetchGallery } from "../fetch.js";
+
 const outputGallery = document.querySelector(".gallery");
 
-let gallery = [
-    "assets/img/gallery/galleri1.jpeg",
-    "assets/img/gallery/galleri2.jpeg",
-    "assets/img/gallery/galleri3.jpeg",
-    "assets/img/gallery/galleri4.jpg",
-    "assets/img/gallery/galleri5.jpeg",
-    "assets/img/gallery/galleri6.jpeg"
-]
+let gallery = await fetchGallery()
 
-const galleryTmpl = (img) => {
-    return `
+const galleryTmpl = (gallery) => {
+  return `
     <div class="gallery-img">
-        <img src="${img}" alt="gallery image">
+        <img src="${gallery.image}" alt="gallery image">
     </div>`;
-}
+};
 
 export const galleryList = () => {
     if (gallery) {
