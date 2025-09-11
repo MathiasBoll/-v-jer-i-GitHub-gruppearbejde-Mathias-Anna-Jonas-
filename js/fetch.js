@@ -1,6 +1,6 @@
-export async function fetchProducts() {
+export async function fetchRecommended() {
   try {
-    const response = await fetch("../data/productsGroups.json");
+    const response = await fetch("../data/recommended.json");
     const data = await response.json();
     return data;
     
