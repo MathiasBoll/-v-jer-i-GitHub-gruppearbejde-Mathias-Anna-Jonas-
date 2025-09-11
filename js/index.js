@@ -5,3 +5,4 @@ initSlider();
 import { galleryList } from './components/gallery.js';
 
 galleryList()
+initSlider();
