@@ -12,7 +12,6 @@
 .recommended-card {
   background: #fff;
   border: 1px solid #e5e5e5;
-  border-radius: 12px;
   width: 18rem;
   display: flex;
   flex-direction: column;

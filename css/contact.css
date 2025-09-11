@@ -1,11 +1,10 @@
 aside.contact-form {
-  background-color: #e6e6e6; /* light grey background matching the design */
-  padding: 100px 0;         /* generous vertical space around the form */
+  background-color: #e6e6e6;
+  padding: 100px 0;
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Center the heading and give it appropriate typography */
 aside.contact-form > h2 {
   text-align: center;
   font-size: 2rem;
@@ -15,18 +14,16 @@ aside.contact-form > h2 {
   margin: 0 0 40px 0;
 }
 
-/* Style the inner form separately from the container */
 aside.contact-form > form.contact-form {
-  max-width: 540px;       /* keep the form narrow and centered */
-  margin: 0 auto;         /* center horizontally */
+  max-width: 540px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 18px;              /* space between form fields */
-  padding: 0 20px;        /* horizontal padding for small screens */
+  gap: 18px; 
+  padding: 0 20px; 
   box-sizing: border-box;
 }
 
-/* Text inputs and textarea share common styling */
 aside.contact-form > form.contact-form input,
 aside.contact-form > form.contact-form textarea {
   width: 100%;
@@ -40,13 +37,11 @@ aside.contact-form > form.contact-form textarea {
   box-sizing: border-box;
 }
 
-/* Larger height for the message textarea */
 aside.contact-form > form.contact-form textarea {
   min-height: 140px;
   resize: vertical;
 }
 
-/* Placeholder styling to match uppercase and letter spacing in the design */
 aside.contact-form > form.contact-form input::placeholder,
 aside.contact-form > form.contact-form textarea::placeholder {
   color: #777;
@@ -55,7 +50,6 @@ aside.contact-form > form.contact-form textarea::placeholder {
   text-transform: uppercase;
 }
 
-/* Submit button styling */
 aside.contact-form > form.contact-form button {
   width: 100%;
   background: #000;
@@ -65,7 +59,7 @@ aside.contact-form > form.contact-form button {
   padding: 14px 12px;
   font-size: 0.9rem;
   font-weight: 700;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
   transition: opacity 0.15s ease;
@@ -74,7 +68,6 @@ aside.contact-form > form.contact-form button:hover {
   opacity: 0.9;
 }
 
-/* Responsive tweaks: reduce padding on small screens */
 @media (max-width: 600px) {
   aside.contact-form {
     padding: 60px 0;
