@@ -1,13 +1,28 @@
-/* Mørk baggrund som i designet */
+/* Hele sektionen med mørk baggrund */
 .recommended-products {
   background: #4b4b4b;
   padding: 60px 0;
-  display: flex;
-  gap: 36px;
-  justify-content: center;
-  flex-wrap: wrap;
 }
-
+ 
+/* Overskriften øverst i sektionen */
+.recommended-heading {
+  text-align: center;          /* centrer tekst */
+  font-size: 2rem;             /* samme som andre sektionstitler */
+  font-weight: 700;            /* gør den fed */
+  letter-spacing: 0.02em;      /* let spredning for et pænt look */
+  color: #fff;                 /* hvid tekst på mørk baggrund */
+  margin: 0 0 40px 0;          /* luft under overskriften */
+  font-family: "Georgia", serif; /* brug evt. din design-font */
+}
+ 
+/* Ny wrapper til selve kortene */
+.recommended-list {
+  display: flex;               /* placer kortene i en række */
+  gap: 36px;                   /* afstand mellem kort */
+  justify-content: center;     /* centrer kortene */
+  flex-wrap: wrap;             /* så de hopper ned på næste række ved behov */
+}
+ 
 /* Kort med hvid baggrund og tynd kant */
 .recommended-card {
   background: #fff;
@@ -17,7 +32,7 @@
   flex-direction: column;
   overflow: hidden;
 }
-
+ 
 /* Billeddelen */
 .recommended-card .card-img {
   background: #f8f8f8;
@@ -31,7 +46,7 @@
   height: 160px;
   object-fit: contain;
 }
-
+ 
 /* Informationsdelen: brand, titel, pris */
 .recommended-card .card-info {
   padding: 16px;
@@ -52,10 +67,10 @@
   font-weight: 600;
   margin: 0;
 }
-
-/* Responsiv: to per række på mellemstore skærme, én på små */
+ 
+/* Responsiv tilpasning */
 @media (max-width: 900px) {
-  .recommended-products {
+  .recommended-list {
     justify-content: space-around;
   }
   .recommended-card {
@@ -67,3 +82,4 @@
     width: 100%;
   }
 }
+ 

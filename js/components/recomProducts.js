@@ -7,10 +7,17 @@ export const recommendedList = async () => {
   const container = document.querySelector(".recommended-products");
   if (!container) return;
 
-  container.innerHTML = ""; // ryd containeren
+  // Byg sektionens overskrift og en tom liste-wrapper
+  container.innerHTML = `
+    <h2 class="recommended-heading">Vi Anbefaler</h2>
+    <div class="recommended-list"></div>
+  `;
 
-  recommended.forEach((item) => { 
-    container.insertAdjacentHTML(
+  const list = container.querySelector(".recommended-list");
+
+  // Indsæt hvert produktkort i .recommended-list
+  recommended.forEach((item) => {
+    list.insertAdjacentHTML(
       "beforeend",
       `
       <article class="recommended-card">
