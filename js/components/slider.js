@@ -6,7 +6,7 @@ export async function initSlider() {
     return;
   }
 
-  // Opret elementer
+  // Opret DOM-elementer til slider
   const img = document.createElement('img');
   img.className = 'image-in-slider';
   img.alt = 'Slider billede';
@@ -25,10 +25,17 @@ export async function initSlider() {
     const res = await fetch('data/slider.json');
     if (!res.ok) throw new Error('Kunne ikke hente slider.json');
     const data = await res.json();
-    images = data.images;
+
+    if (data.images && data.images.length > 0) {
+      images = data.images;
+    } else {
+      console.warn('⚠️ Ingen billeder fundet i slider.json – bruger fallback');
+      images = ['img/slider/hero_img.jpg'];
+    }
   } catch (err) {
     console.error('❌ Fejl ved hentning af slider.json:', err);
-    return;
+    // fallback hvis JSON fejler
+    images = ['img/slider/hero_img.jpg'];
   }
 
   // ==========================
@@ -39,7 +46,7 @@ export async function initSlider() {
     img.src = images[i];
   };
 
-  setActive();
+  setActive(); // Vis første billede
   setInterval(() => {
     i = (i + 1) % images.length;
     setActive();

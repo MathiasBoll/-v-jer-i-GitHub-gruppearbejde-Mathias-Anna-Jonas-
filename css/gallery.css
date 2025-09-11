@@ -35,6 +35,10 @@
   max-width: 95vw;
   max-height: 90vh;
   overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .dialog-content {
@@ -61,7 +65,7 @@
   cursor: pointer;
   font-size: 14px;
   margin-bottom: 16px;  /* giver luft under knappen */
-  margin-top: -8px; /* trækker knappen op tættere på billedet */
+  margin-top: -8px;     /* trækker knappen op tættere på billedet */
 }
 
 .closeBtn:hover {
