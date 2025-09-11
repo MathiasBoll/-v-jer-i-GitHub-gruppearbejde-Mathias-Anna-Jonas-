@@ -1,8 +1,18 @@
+// ==========================
+// IMPORT AF KOMPONENTER
+// ==========================
+import { initHeader } from './components/header.js';
 import { initSlider } from './components/slider.js';
-console.log('[index] loaded');
-initSlider();
-
 import { galleryList } from './components/gallery.js';
 
-galleryList()
+// ==========================
+// DEBUG LOG
+// ==========================
+console.log('[index] loaded');
 
+// ==========================
+// INITIALISERING
+// ==========================
+initHeader();   // Bygger topbar + navigation
+initSlider();   // Fylder slideren med billeder + overskrift
+galleryList();  // Kører galleri-komponenten
