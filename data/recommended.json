@@ -1,0 +1,26 @@
+[
+    {
+    "img": "img/recommended/sko_guld.jpeg",
+    "title": "Roccamore",
+    "brand": "Lili gold glitter",
+    "price": 2200
+    },
+    {
+    "img": "img/recommended/taske1.jpeg",
+    "title": "Saddler",
+    "brand": "Garda Totetaske",
+    "price": 1500
+    },
+    {
+    "img": "img/recommended/taske3.jpeg",
+    "title": "Saddler",
+    "brand": "Mia Skuldertaske",
+    "price": 2200 
+    },
+    {
+    "img": "img/recommended/b├ªlte3.jpeg",
+    "title": "Saddler",
+    "brand": "Mercy Ruskindstaske",
+    "price": 500
+    }
+]
