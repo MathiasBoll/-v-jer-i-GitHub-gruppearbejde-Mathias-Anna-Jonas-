@@ -9,7 +9,7 @@ export const recommendedList = async () => {
 
   container.innerHTML = ""; // ryd containeren
 
-  recommended.forEach((item) => {
+  recommended.forEach((item) => { 
     container.insertAdjacentHTML(
       "beforeend",
       `

@@ -1,0 +1,24 @@
+{
+  "title": "Kontakt Os",
+  "fields": [
+    {
+      "type": "text",
+      "name": "name",
+      "label": "Navn",
+      "placeholder": "Navn"
+    },
+    {
+      "type": "email",
+      "name": "email",
+      "label": "Email",
+      "placeholder": "Email"
+    },
+    {
+      "type": "textarea",
+      "name": "message",
+      "label": "Besked",
+      "placeholder": "Besked..."
+    }
+  ],
+  "submitText": "Send besked"
+}

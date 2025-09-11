@@ -27,3 +27,13 @@ export async function fetchGallery() {
     console.error("Error fetching or parsing data:", error);
   }
 }
+
+export async function fetchContact() {
+  try {
+    const response = await fetch("../data/contact.json");
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching or parsing data:", error);
+  }
+}
