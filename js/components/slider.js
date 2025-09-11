@@ -1,11 +1,12 @@
 // js/components/slider.js
-export function initSlider() {
+export async function initSlider() {
   const slider = document.querySelector('.slider');
   if (!slider) {
     console.error('❌ Ingen .slider fundet i HTML');
     return;
   }
 
+  // Opret elementer
   const img = document.createElement('img');
   img.className = 'image-in-slider';
   img.alt = 'Slider billede';
@@ -16,12 +17,23 @@ export function initSlider() {
 
   slider.append(img, h1);
 
-  const images = [
-    'img/slider/hero_img.jpg',
-    'img/slider/hero_img2.jpg',
-    'img/slider/hero_img3.jpg',
-  ];
+  // ==========================
+  // Hent billeder fra JSON
+  // ==========================
+  let images = [];
+  try {
+    const res = await fetch('data/slider.json');
+    if (!res.ok) throw new Error('Kunne ikke hente slider.json');
+    const data = await res.json();
+    images = data.images;
+  } catch (err) {
+    console.error('❌ Fejl ved hentning af slider.json:', err);
+    return;
+  }
 
+  // ==========================
+  // Slider funktionalitet
+  // ==========================
   let i = 0;
   const setActive = () => {
     img.src = images[i];
