@@ -4,6 +4,7 @@
 import { initHeader } from './components/header.js';
 import { initSlider } from './components/slider.js';
 import { galleryList } from './components/gallery.js';
+import { productList } from './components/productGroups.js';
 
 // ==========================
 // DEBUG LOG
@@ -16,3 +17,4 @@ console.log('[index] loaded');
 initHeader();   // Bygger topbar + navigation
 initSlider();   // Fylder slideren med billeder + overskrift
 galleryList();  // Kører galleri-komponenten
+productList()

@@ -6,3 +6,21 @@
 @import "contact.css";
 
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+p {
+    font-family: "Raleway", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Abril Fatface", serif;
+    font-weight: 200;
+}
